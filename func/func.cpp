@@ -23,10 +23,23 @@ int math::algoritm_euklid(int num1,int num2) {
 }
 
 bool math::num_is_prime(int num) {
-	for (int i = 2; i <= int (sqrt(num) + 1); i++) {
+	for (int i = 2; i < int (sqrt(num) + 1); i++) {
 		if (num % i == 0)
 			return false;
 	}
 	return true;
 }
 
+int math::sum_delitelei_num(int num) {
+	int temp_num, sum = 0;
+	for (int i = 2; i < int (sqrt(num)+1); i++) {
+		temp_num = num % i;
+		if (temp_num == 0)
+			sum = sum + i + (num / i);
+			
+	}
+	if (int (sqrt(num)) * int (sqrt(num)) == num)
+		return sum + 1 - sqrt(num);
+	else
+		return sum + 1;
+}
