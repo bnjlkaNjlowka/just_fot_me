@@ -4,17 +4,12 @@
 
 int algoritm_euklid(int num1,int num2) {
 	if (num1 > num2) {
-		//std::cout << num1 << " " << num2 << std::endl;
 		while (num1 !=0 && num2 !=0) {
-			//std::cout << a << std::endl;
-			//std::cout << "num1 " << num1 << "num2 " << num2 << std::endl;
 			while (num1 >= num2 && num2 != 0) {
 				num1 = num1 - num2;
-				//std::cout << "num1 " << num1 << std::endl;
 			}
 			while (num2 >= num1 && num1 != 0) {
 				num2 = num2 - num1;
-				//std::cout << "num2 " << num2 << std::endl;
 			}
 		}
 	}
@@ -39,9 +34,3 @@ int main() {
 	std::cout << "Наибольший общий делитель введенных чисел:" << ans << std::endl; 
 	return 0;
 }
-
-
-
-
-
-
