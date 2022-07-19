@@ -1,6 +1,7 @@
 #include <iostream>
 #include "func.h"
 #include <math.h>
+#include <vector>
 
 int math::algoritm_euklid(int num1,int num2) {
 	if (num1 > num2) {
@@ -42,4 +43,18 @@ int math::sum_delitelei_num(int num) {
 		return sum + 1 - sqrt(num);
 	else
 		return sum + 1;
+}
+
+std::vector <int> math::prostie_deliteli_num(int num) {
+	int i = 2;
+	std::vector <int> ans;
+	while (num != 1) {
+		if (num % i == 0) {
+			num = num / i;
+			ans.push_back(i);
+		}
+		else
+			i++;
+	}
+	return ans;
 }
